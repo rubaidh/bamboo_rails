@@ -18,7 +18,7 @@ spec = Gem::Specification.new do |s|
     "in a manner that Bamboo will happily consume."
 
   s.files = %w(
-    bamboo_rails.gemspec MIT-LICENSE README
+    bamboo_rails.gemspec MIT-LICENSE Rakefile README
     tasks/bamboo_rails_tasks.rake
     lib/bamboo_rails.rb
   )
