@@ -9,14 +9,12 @@ spec = Gem::Specification.new do |s|
   s.homepage = 'http://github.com/rubaidh/bamboo_rails'
   s.summary  = 'A bit of assistance for using Bamboo in your Rails applications'
 
-  s.description = <<-TEXT
-    This Rails gem/plugin just contains a couple of tasks that make life
-    easier when dealing with the Atlassian Bamboo Continuous Integration
-    Server. All it does is to create a rake task, +bamboo+, which will run
-    your full test suite (be it Cucumber, RSpec or Test::Unit) and use the
-    +ci_reporter+ gem to format the results in a manner that Bamboo will
-    happily consume.
-  TEXT
+  s.description = "This Rails gem/plugin just contains a couple of tasks "  +
+    "that make life easier when dealing with the Atlassian Bamboo "         +
+    "Continuous Integration Server. All it does is to create a rake task, " +
+    "+bamboo+, which will run your full test suite (be it Cucumber, RSpec " +
+    "or Test::Unit) and use the +ci_reporter+ gem to format the results "   +
+    "in a manner that Bamboo will happily consume."
 
   s.files = %w(
     bamboo_rails.gemspec MIT-LICENSE README
