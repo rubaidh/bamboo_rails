@@ -1,13 +1,14 @@
 spec = Gem::Specification.new do |s|
 
-  s.name     = 'bamboo_rails'
-  s.version  = '0.99.0'
-  s.date     = '2009-05-06'
-  s.authors  = ['Graeme Mathieson', 'Rubaidh Ltd']
-  s.email    = 'support@rubaidh.com'
-  s.has_rdoc = false
-  s.homepage = 'http://github.com/rubaidh/bamboo_rails'
-  s.summary  = 'A bit of assistance for using Bamboo in your Rails applications'
+  s.name              = 'bamboo_rails'
+  s.version           = '0.99.0'
+  s.date              = '2009-05-06'
+  s.authors           = ['Graeme Mathieson', 'Rubaidh Ltd']
+  s.email             = 'support@rubaidh.com'
+  s.has_rdoc          = false
+  s.homepage          = 'http://github.com/rubaidh/bamboo_rails'
+  s.summary           = '[Rails] A bit of assistance for using Bamboo in your Rails applications'
+  s.rubyforge_project = 'rubaidh'
 
   s.description = "This Rails gem/plugin just contains a couple of tasks "  +
     "that make life easier when dealing with the Atlassian Bamboo "         +
