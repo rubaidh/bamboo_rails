@@ -20,6 +20,7 @@ spec = Gem::Specification.new do |s|
   s.files = %w(
     bamboo_rails.gemspec MIT-LICENSE README
     tasks/bamboo_rails_tasks.rake
+    lib/bamboo_rails.rb
   )
 
   # 1.6.0 is the first version that has cucumber support.
