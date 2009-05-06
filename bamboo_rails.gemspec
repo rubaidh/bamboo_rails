@@ -9,7 +9,7 @@ spec = Gem::Specification.new do |s|
   s.homepage = 'http://github.com/rubaidh/bamboo_rails'
   s.summary  = 'A bit of assistance for using Bamboo in your Rails applications'
 
-  s.description <<-TEXT
+  s.description = <<-TEXT
     This Rails gem/plugin just contains a couple of tasks that make life
     easier when dealing with the Atlassian Bamboo Continuous Integration
     Server. All it does is to create a rake task, +bamboo+, which will run
