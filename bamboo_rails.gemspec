@@ -5,7 +5,6 @@ spec = Gem::Specification.new do |s|
   s.date              = '2009-05-06'
   s.authors           = ['Graeme Mathieson', 'Rubaidh Ltd']
   s.email             = 'support@rubaidh.com'
-  s.has_rdoc          = true
   s.homepage          = 'http://github.com/rubaidh/bamboo_rails'
   s.summary           = '[Rails] A bit of assistance for using Bamboo in your Rails applications'
   s.rubyforge_project = 'rubaidh'
@@ -22,6 +21,12 @@ spec = Gem::Specification.new do |s|
     tasks/bamboo_rails_tasks.rake
     lib/bamboo_rails.rb
   )
+
+  s.has_rdoc          = true
+  s.extra_rdoc_files += ['README', 'MIT-LICENSE']
+  s.rdoc_options     += [
+    '--title', 'Bamboo Rails', '--main', 'README', '--line-numbers'
+  ]
 
   # 1.6.0 is the first version that has cucumber support.
   s.add_dependency 'ci_reporter', '>=1.6.0'
