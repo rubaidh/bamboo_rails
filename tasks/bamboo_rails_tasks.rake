@@ -11,7 +11,19 @@ namespace :bamboo do
 
   task :preflight => [ "log:clear", :environment, "gems:build:force", "db:migrate:reset" ]
 
-  task :test     => [ "ci:setup:testunit", "rake:test" ]
-  task :spec     => [ "ci:setup:rspec", "spec:rcov" ]
-  task :features => [ "ci:setup:cucumber", "rake:features" ]
+  task :test => [ "ci:setup:testunit", "rake:test" ]
+
+  task :spec do
+    if Rake::Task.task_defined?("spec:rcov")
+      Rake::Task["ci:setup:rspec"].invoke
+      Rake::Task["spec:rcov"].invoke
+    end
+  end
+
+  task :features do
+    if Rake::Task.task_defined?("rake:features")
+      Rake::Task["ci:setup:cucumber"].invoke
+      Rake::Task["rake:features"].invoke
+    end
+  end
 end
