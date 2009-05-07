@@ -1,3 +1,13 @@
-= 1.0.0
+= Change Log
+
+== 1.0.1
+
+* Cope with projects that don't use Cucumber or RSpec.
+
+* Auto build any vendor gems that need compilation.
+
+* Clear out the log files on each run so we get "useful" artefacts.
+
+== 1.0.0
 
 * Initial release.
