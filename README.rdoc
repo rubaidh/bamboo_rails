@@ -1,10 +1,8 @@
-Bamboo Rails
-============
+= Bamboo Rails
 
 This Rails gem/plugin just contains a couple of tasks that make life easier when dealing with the Atlassian Bamboo Continuous Integration Server.  All it does is to create a rake task, +bamboo+, which will run your full test suite (be it Cucumber, RSpec or Test::Unit) and use the +ci_reporter+ gem to format the results in a manner that Bamboo will happily consume.
 
-Installation
-============
+== Installation
 
 If you're installing as a plugin with a recent version of Rails, it's totally straightforward:
 
@@ -30,8 +28,7 @@ Here's the wrinkle.  Rake tasks are not currently loaded from vendored gems.  Yo
 
 This will autoload you all of the tasks from your vendor gems, including the Bamboo one.
 
-Example
-=======
+== Example
 
 It's not rocket science: :-)
 
