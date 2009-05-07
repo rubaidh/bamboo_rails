@@ -1,5 +1,11 @@
 = Change Log
 
+== 1.0.2
+
+* Some apps don't use a database at all. In that situation, don't bother
+  trying to prepare a database.
+
+
 == 1.0.1
 
 * Cope with projects that don't use Cucumber or RSpec.
