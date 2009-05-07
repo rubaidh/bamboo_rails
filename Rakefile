@@ -8,5 +8,5 @@ Rake::GemPackageTask.new(spec) do |t|
 end
 
 Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_files += ['README', 'MIT-LICENSE', 'lib/bamboo_rails.rb']
+  rdoc.rdoc_files += ['README.rdoc', 'MIT-LICENSE', 'lib/bamboo_rails.rb']
 end

@@ -17,15 +17,15 @@ spec = Gem::Specification.new do |s|
     "in a manner that Bamboo will happily consume."
 
   s.files = %w(
-    bamboo_rails.gemspec MIT-LICENSE Rakefile README
+    bamboo_rails.gemspec MIT-LICENSE Rakefile README.rdoc
     tasks/bamboo_rails_tasks.rake
     lib/bamboo_rails.rb
   )
 
   s.has_rdoc          = true
-  s.extra_rdoc_files += ['README', 'MIT-LICENSE']
+  s.extra_rdoc_files += ['README.rdoc', 'MIT-LICENSE']
   s.rdoc_options     += [
-    '--title', 'Bamboo Rails', '--main', 'README', '--line-numbers'
+    '--title', 'Bamboo Rails', '--main', 'README.rdoc', '--line-numbers'
   ]
 
   # 1.6.0 is the first version that has cucumber support.
