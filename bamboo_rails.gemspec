@@ -17,13 +17,13 @@ spec = Gem::Specification.new do |s|
     "in a manner that Bamboo will happily consume."
 
   s.files = %w(
-    bamboo_rails.gemspec MIT-LICENSE Rakefile README.rdoc
+    bamboo_rails.gemspec CHANGELOG MIT-LICENSE Rakefile README.rdoc
     tasks/bamboo_rails_tasks.rake
     lib/bamboo_rails.rb
   )
 
   s.has_rdoc          = true
-  s.extra_rdoc_files += ['README.rdoc', 'MIT-LICENSE']
+  s.extra_rdoc_files += ['README.rdoc', 'CHANGELOG', 'MIT-LICENSE']
   s.rdoc_options     += [
     '--title', 'Bamboo Rails', '--main', 'README.rdoc', '--line-numbers'
   ]

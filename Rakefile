@@ -10,7 +10,7 @@ Rake::GemPackageTask.new(spec) do |t|
 end
 
 Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_files += ['README.rdoc', 'MIT-LICENSE', 'lib/bamboo_rails.rb']
+  rdoc.rdoc_files += ['README.rdoc', 'CHANGELOG', 'MIT-LICENSE', 'lib/bamboo_rails.rb']
 end
 
 desc "Package and upload the release to RubyForge"
