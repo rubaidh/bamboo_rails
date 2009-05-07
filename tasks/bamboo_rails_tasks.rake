@@ -9,7 +9,7 @@ end
 namespace :bamboo do
   task :all => [ :preflight, :test, :spec, :features ]
 
-  task :preflight => [ :environment, "gems:build:force", "db:migrate:reset" ]
+  task :preflight => [ "log:clear", :environment, "gems:build:force", "db:migrate:reset" ]
 
   task :test     => [ "ci:setup:testunit", "rake:test" ]
   task :spec     => [ "ci:setup:rspec", "spec:rcov" ]
