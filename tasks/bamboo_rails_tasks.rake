@@ -9,13 +9,19 @@ end
 namespace :bamboo do
   task :all => [ :preflight, :test, :spec, :features ]
 
-  task :preflight => [ "log:clear", :environment, :gems, "db:migrate:reset" ]
+  task :preflight => [ "log:clear", :environment, :gems, :db ]
 
   task :gems do
     if Rake::Task.task_defined?("gems:build:force")
       Rake::Task["gems:build:force"].invoke
     else
       Rake::Task["gems:build"].invoke
+    end
+  end
+
+  task :db do
+    if defined?(ActiveRecord) && File.exist?(File.join(RAILS_ROOT, "config", "database.yml"))
+      Rake::Task["db:migrate:reset"].invoke
     end
   end
 
