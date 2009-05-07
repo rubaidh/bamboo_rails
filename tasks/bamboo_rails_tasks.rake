@@ -7,7 +7,9 @@ task :bamboo do
 end
 
 namespace :bamboo do
-  task :all => [ :environment, "db:migrate:reset", :test, :spec, :features ]
+  task :all => [ :preflight, :test, :spec, :features ]
+
+  task :preflight => [ :environment, "gems:build:force", "db:migrate:reset" ]
 
   task :test     => [ "ci:setup:testunit", "rake:test" ]
   task :spec     => [ "ci:setup:rspec", "spec:rcov" ]
