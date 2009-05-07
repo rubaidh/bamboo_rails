@@ -1,0 +1,5 @@
+# Generated packages
+/pkg
+
+# Generated documentation
+/html
