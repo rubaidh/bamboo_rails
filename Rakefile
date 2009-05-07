@@ -1,6 +1,7 @@
 require 'rake'
 require 'rake/gempackagetask'
 require 'rake/rdoctask'
+require 'rake/clean'
 
 spec = eval(File.read('bamboo_rails.gemspec'))
 Rake::GemPackageTask.new(spec) do |t|
