@@ -4,8 +4,11 @@ require 'rake/rdoctask'
 require 'rake/clean'
 require 'rubyforge'
 require 'spec/rake/spectask'
+require 'ci/reporter/rake/rspec'
 
 task :default => :spec
+
+task :bamboo => [:package, "ci:setup:rspec", :spec]
 
 Spec::Rake::SpecTask.new
 
@@ -24,3 +27,4 @@ task :release => [:clobber, :package] do
   rubyforge.login
   rubyforge.add_release spec.rubyforge_project, spec.name, spec.version.to_s, "pkg/#{spec.name}-#{spec.version}.gem"
 end
+
