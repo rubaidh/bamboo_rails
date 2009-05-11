@@ -3,3 +3,6 @@
 
 # Generated documentation
 /html
+
+# Generated test reports
+/spec/reports
