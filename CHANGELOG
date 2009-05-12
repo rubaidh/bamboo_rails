@@ -1,10 +1,14 @@
 = Change Log
 
+== 1.0.3
+
+* Test suite with RSpec to verify the correct behaviour of the `rake bamboo`
+  task.
+
 == 1.0.2
 
 * Some apps don't use a database at all. In that situation, don't bother
   trying to prepare a database.
-
 
 == 1.0.1
 
