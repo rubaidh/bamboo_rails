@@ -119,6 +119,31 @@ describe "Rake tasks" do
       end
     end
 
+    describe "with ActiveRecord available" do
+      before(:each) do
+        define_tasks "db:migrate:reset"
+
+        RAILS_ROOT = "/non/existant/path"
+        File.stub!(:exist?).with(File.join(RAILS_ROOT, "config", "database.yml")).and_return(true)
+
+        module ActiveRecord
+        end
+
+        Rake::Task['bamboo'].invoke
+      end
+
+      it_should_behave_like "any bamboo task invocation"
+
+      it "should run the db:migrate:reset task" do
+        @tasks_run.should include("db:migrate:reset")
+      end
+
+      after(:each) do
+        Object.send :remove_const, :ActiveRecord
+        Object.send :remove_const, :RAILS_ROOT
+      end
+    end
+
     describe "with the gems:build:force task available" do
       before(:each) do
         define_tasks "gems:build:force"
