@@ -118,6 +118,21 @@ describe "Rake tasks" do
         @tasks_run.should include("features")
       end
     end
+
+    describe "with the gems:build:force task available" do
+      before(:each) do
+        define_tasks "gems:build:force"
+        Rake::Task['bamboo'].invoke
+      end
+
+      it "should run the gems:build:force task" do
+        @tasks_run.should include("gems:build:force")
+      end
+
+      it "should not run the gems:build task" do
+        @tasks_run.should_not include("gems:build")
+      end
+    end
   end
 
 end
