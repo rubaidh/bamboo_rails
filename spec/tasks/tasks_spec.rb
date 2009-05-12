@@ -2,18 +2,19 @@ require File.join(File.dirname(__FILE__), '..', 'spec_helper')
 require 'rake'
 
 describe "Rake tasks" do
+  def define_tasks(*tasks)
+    tasks.each do |task_name|
+      task task_name do
+        @tasks_run[task_name] = true
+      end
+    end
+  end
   before(:each) do
     @rake = Rake.application = Rake::Application.new
     load File.join(File.dirname(__FILE__), '..', '..', 'tasks', 'bamboo_rails_tasks.rake')
     @tasks_run = {}
 
-    [
-      "log:clear", "environment", "gems:build", "ci:setup:testunit", "test"
-    ].each do |task_name|
-      task task_name do
-        @tasks_run[task_name] = true
-      end
-    end
+    define_tasks "log:clear", "environment", "gems:build", "ci:setup:testunit", "test"
   end
 
   after(:each) do
@@ -86,13 +87,7 @@ describe "Rake tasks" do
 
     describe "with RSpec specs" do
       before(:each) do
-        [
-          "ci:setup:rspec", "spec:rcov"
-        ].each do |task_name|
-          task task_name do
-            @tasks_run[task_name] = true
-          end
-        end
+        define_tasks "ci:setup:rspec", "spec:rcov"
         Rake::Task['bamboo'].invoke
       end
 
@@ -109,13 +104,7 @@ describe "Rake tasks" do
 
     describe "with Cucumber features" do
       before(:each) do
-        [
-          "ci:setup:cucumber", "features"
-        ].each do |task_name|
-          task task_name do
-            @tasks_run[task_name] = true
-          end
-        end
+        define_tasks "ci:setup:cucumber", "features"
         Rake::Task['bamboo'].invoke
       end
 
