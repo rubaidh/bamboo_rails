@@ -20,6 +20,7 @@ spec = Gem::Specification.new do |s|
     bamboo_rails.gemspec CHANGELOG MIT-LICENSE Rakefile README.rdoc
     tasks/bamboo_rails_tasks.rake
     lib/bamboo_rails.rb
+    spec/spec_helper.rb spec/tasks/tasks_spec.rb
   )
 
   s.has_rdoc          = true
