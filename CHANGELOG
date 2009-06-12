@@ -1,5 +1,10 @@
 = Change Log
 
+== 1.0.4
+
+* Run the "gems" task before any other task as we need gems to be built before
+  the Rails environment will actually load.
+
 == 1.0.3
 
 * Test suite with RSpec to verify the correct behaviour of the `rake bamboo`

@@ -1,8 +1,8 @@
 spec = Gem::Specification.new do |s|
 
   s.name              = 'bamboo_rails'
-  s.version           = '1.0.3'
-  s.date              = '2009-05-12'
+  s.version           = '1.0.4'
+  s.date              = '2009-06-12'
   s.authors           = ['Graeme Mathieson', 'Rubaidh Ltd']
   s.email             = 'support@rubaidh.com'
   s.homepage          = 'http://github.com/rubaidh/bamboo_rails'

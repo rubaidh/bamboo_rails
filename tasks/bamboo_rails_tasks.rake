@@ -9,7 +9,7 @@ end
 namespace :bamboo do
   task :all => [ :preflight, :test, :spec, :features ]
 
-  task :preflight => [ "log:clear", :environment, :gems, :db ]
+  task :preflight => [ :gems, "log:clear", :environment, :db ]
 
   task :gems do
     if Rake::Task.task_defined?("gems:build:force")
