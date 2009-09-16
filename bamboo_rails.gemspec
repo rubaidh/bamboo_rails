@@ -1,7 +1,7 @@
 spec = Gem::Specification.new do |s|
 
   s.name              = 'bamboo_rails'
-  s.version           = '1.0.5'
+  s.version           = '1.0.6'
   s.date              = '2009-09-16'
   s.authors           = ['Graeme Mathieson', 'Rubaidh Ltd']
   s.email             = 'support@rubaidh.com'
@@ -20,6 +20,7 @@ spec = Gem::Specification.new do |s|
     bamboo_rails.gemspec CHANGELOG MIT-LICENSE Rakefile README.rdoc
     tasks/bamboo_rails_tasks.rake
     lib/bamboo_rails.rb
+    lib/bamboo_rails/rake/task.rb
     spec/spec_helper.rb spec/tasks/tasks_spec.rb
   )
 

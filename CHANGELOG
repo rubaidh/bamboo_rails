@@ -1,9 +1,13 @@
 = Change Log
 
+== 1.0.6
+
+* Version bump because I forgot to update the gemspec.
+
 == 1.0.5
 
-* Make life a little more gem friendly. Moved the tasks into lib/rake/task so that it can be
-  required from another Rakefile.
+* Make life a little more gem friendly. Moved the tasks into lib/rake/task so
+  that it can be required from another Rakefile.
 
 == 1.0.4
 
