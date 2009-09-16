@@ -1,5 +1,10 @@
 = Change Log
 
+== 1.0.5
+
+* Make life a little more gem friendly. Moved the tasks into lib/rake/task so that it can be
+  required from another Rakefile.
+
 == 1.0.4
 
 * Run the "gems" task before any other task as we need gems to be built before

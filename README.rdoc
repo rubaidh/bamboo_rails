@@ -8,35 +8,30 @@ the results in a manner that Bamboo will happily consume.
 
 == Installation
 
+== As a Plugin
+
 If you're installing as a plugin with a recent version of Rails, it's totally
 straightforward:
 
     script/plugin install git://github.com/rubaidh/bamboo_rails.git
 
+=== Gem installation
+
 If you want to install it as a gem, that should be straightforward, too, but
-currently (as of Rails 2.3.2), it's not quite so straightforward. First of
-all, install the gem on your development machine:
+there's an extra couple of steps. First of all configure Rails to load it in
++config/environment.rb+:
 
-    sudo gem install bamboo_rails
+    config.gem "bamboo_rails", :lib => false
 
-Then configure Rails to load it in +config/environment.rb+:
+Then make sure the gem is installed:
 
-    config.gem "bamboo_rails"
+    sudo rake gems:install
 
-Now unpack the dependencies into your source tree (because you vendor
-everything, right?):
+(skipping `sudo` if that's not your thing). Finally, you'll have to create a
+Rakefile which requires the bamboo task. Create the file
++lib/tasks/bamboo.rake+ in your project with the following content:
 
-    rake gems:unpack:dependencies
-
-and add them to your source control system.
-
-Here's the wrinkle. Rake tasks are not currently loaded from vendored gems.
-You'll need to add the following to your top-level Rakefile:
-
-    Dir["#{RAILS_ROOT}/vendor/gems/*/**/tasks/**/*.rake"].sort.each { |ext| load ext }
-
-This will autoload you all of the tasks from your vendor gems, including the
-Bamboo one.
+    require 'bamboo_rails/rake/task'
 
 == Example
 
