@@ -1,3 +1,7 @@
+require 'ci/reporter/rake/cucumber'
+require 'ci/reporter/rake/rspec'
+require 'ci/reporter/rake/test_unit'
+
 desc "Reset the test database and run the entire test suite, formatting results for the Bamboo CI Server."
 task :bamboo do
   # Force us to be using the test environment so that we can use regular rake
